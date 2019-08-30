@@ -1,5 +1,5 @@
 
-Appolo GraphQl 
+Appolo GraphQL Docs
 ```
 npm install apollo-boost @apollo/react-hooks graphql
 ```
