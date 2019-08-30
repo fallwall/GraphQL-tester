@@ -1,29 +1,13 @@
-import React, { Component } from 'react';
-import { threeDices } from './services/api';
-import './App.css';
+import React from 'react';
 
-export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      dices: []
-    }
-  }
+import { ApolloProvider } from '@apollo/react-hooks';
 
-  componentDidMount=()=> {
-    // const dices = threeDices();
-    console.log(threeDices());
-    // this.setState({
-    //   dices: dices
-    // })
-  }
-  
-  render() {
-    return (
-      <div>
-        {this.state.dices && this.state.dices.map((dice, i) => <div key={i}>dice</div>)}
-      </div>
-    )
-  }
-}
+const App = () => (
+  <ApolloProvider client={client}>
+    <div>
+      <h2>My first Apollo app 🚀</h2>
+    </div>
+  </ApolloProvider>
+);
 
+export default App;
